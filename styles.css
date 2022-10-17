@@ -1,6 +1,4 @@
-* {
-    box-sizing: border-box;
-}
+* {box-sizing: border-box;}
 
 :root {
     --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
@@ -12,6 +10,7 @@
 }
 
 body {
+    margin: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -21,31 +20,79 @@ body {
     background-color: var(--Very-dark-blue-main-BG);
 }
 
-h1 {color: var(--White);font-size: 23px;}
+.container a {
+    color: var(--White);
+    font-size: 23px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+.container a:hover {color: var(--Cyan);}
+
+footer span a {font-size: initial !important;}
 
 p {color: var(--Soft-blue);line-height: 1.5;}
 
 .container {
-    width: max(320px, 50%);
+    width: max(320px, 60%);
     padding: 20px;
+    overflow: hidden;
+    margin: 50px 0;
     background-color: var(--Very-dark-blue-card-BG);
-    height: fit-content;
     border-radius: 15px;
+    box-shadow: 0 20px 20px hsl(215, 48%, 10%),
+    0 40px 40px hsl(215, 49%, 7%);
 }
+
+picture {position: relative;width :100%;display: block;}
 
 picture img {
-    border-radius: 5px;
+    border-radius: 8px;
+    width: 100%;
+    display: block;
+    height: auto;
+    backface-visibility: hidden;
 }
 
-.price {
+picture .svg-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+    background-color: transparent;
+}
+
+picture .svg-container:hover {background-color: rgba(0, 255, 255, 0.5);}
+
+picture .svg-container:hover svg {opacity: 1;}
+
+picture .svg-container svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transition: opacity 0.4s;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(250%, -100%);
+}
+
+.container .price {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid var(--Very-dark-blue-line);
 }
 
-.price svg {
-    transform: translate(-20%, 15%);
-}
+.price p:first-of-type {color: var(--Cyan)}
+
+.price svg {transform: translate(-20%, 15%);}
 
 img.image-avatar {
     width: 30px;
@@ -60,12 +107,16 @@ footer p {
     margin-bottom: 0;
 }
 
+@media (min-width: 1080px) {
+    .container {
+        width: 320px;
+    }
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
     color: var(--White);
 }
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
-}
+.attribution a {color: hsl(228, 45%, 44%);}
