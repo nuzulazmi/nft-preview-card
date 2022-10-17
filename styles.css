@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--Very-dark-blue-main-BG);
+}
+
+h1 {color: var(--White);font-size: 23px;}
+
+p {color: var(--Soft-blue);line-height: 1.5;}
+
+.container {
+    width: max(320px, 50%);
+    padding: 20px;
+    background-color: var(--Very-dark-blue-card-BG);
+    height: fit-content;
+    border-radius: 15px;
+}
+
+picture img {
+    border-radius: 5px;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--Very-dark-blue-line);
+}
+
+.price svg {
+    transform: translate(-20%, 15%);
+}
+
+img.image-avatar {
+    width: 30px;
+    border: 1px solid var(--White);
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+footer p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--White);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
