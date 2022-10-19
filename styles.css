@@ -20,19 +20,6 @@ body {
     background-color: var(--Very-dark-blue-main-BG);
 }
 
-.container a {
-    color: var(--White);
-    font-size: 23px;
-    font-weight: 600;
-    display: inline-block;
-    padding: 10px 0;
-    text-decoration: none;
-}
-
-.container a:hover {color: var(--Cyan);}
-
-footer span a {font-size: initial !important;}
-
 p {color: var(--Soft-blue);line-height: 1.5;}
 
 .container {
@@ -46,9 +33,20 @@ p {color: var(--Soft-blue);line-height: 1.5;}
     0 40px 40px hsl(215, 49%, 7%);
 }
 
-picture {position: relative;width :100%;display: block;}
+.container a {
+    color: var(--White);
+    font-size: 23px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 0;
+    text-decoration: none;
+}
 
-picture img {
+.container a:hover {color: var(--Cyan);}
+
+.picture {position: relative;width :100%;display: block;}
+
+.picture img {
     border-radius: 8px;
     width: 100%;
     display: block;
@@ -56,7 +54,7 @@ picture img {
     backface-visibility: hidden;
 }
 
-picture .svg-container {
+.picture .svg-container {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -70,11 +68,11 @@ picture .svg-container {
     background-color: transparent;
 }
 
-picture .svg-container:hover {background-color: rgba(0, 255, 255, 0.5);}
+.picture .svg-container:hover {background-color: rgba(0, 255, 255, 0.5);}
 
-picture .svg-container:hover svg {opacity: 1;}
+.picture .svg-container:hover svg {opacity: 1;}
 
-picture .svg-container svg {
+.picture .svg-container svg {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -100,6 +98,8 @@ img.image-avatar {
     margin-right: 15px;
     border-radius: 50%;
 }
+
+footer span a {font-size: initial !important;}
 
 footer p {
     display: flex;
