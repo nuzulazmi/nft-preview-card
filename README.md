@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [View solution](https://your-solution-url.com)
+- Solution URL: [View solution](https://www.frontendmentor.io/solutions/responsive-nft-card-using-flexbox-and-media-queries-BybCQv3Qhj)
 - Live Site URL: [View Site](https://nuzulazmi.github.io/nft-preview-card/)
 
 ## My process
